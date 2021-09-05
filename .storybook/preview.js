@@ -17,6 +17,10 @@ export const parameters = {
       {
         name: 'diagnose-dark',
         value: theme.colors.primary
+      },
+      {
+        name: 'diagnose-gray',
+        value: theme.colors.secondary
       }
     ]
   }
