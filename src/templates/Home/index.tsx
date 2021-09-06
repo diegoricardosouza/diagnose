@@ -12,6 +12,8 @@ const Home = () => (
       </Container>
     </S.HeaderWrapper>
 
+    <main></main>
+
     <S.FooterWrapper>
       <Container>
         <Footer />
