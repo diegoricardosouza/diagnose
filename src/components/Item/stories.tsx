@@ -14,5 +14,5 @@ export default {
 export const Default: Story<ItemProps> = (args) => <Item {...args} />
 
 Default.args = {
-  item: 'Configuração por médico'
+  title: 'Configuração por médico'
 }

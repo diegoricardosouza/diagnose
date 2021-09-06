@@ -1,9 +1,11 @@
 import * as S from './styles'
 
 export type ItemProps = {
-  item: string
+  title: string
 }
 
-const Item = ({ item }: ItemProps) => <S.Wrapper>{item}</S.Wrapper>
+const Item = ({ title }: ItemProps) => (
+  <S.Wrapper dangerouslySetInnerHTML={{ __html: title }} />
+)
 
 export default Item
