@@ -12,6 +12,10 @@ export const Wrapper = styled.menu`
 `
 
 export const LogoWrapper = styled.div`
+  a {
+    display: flex;
+  }
+
   ${media.lessThan('medium')`
     max-width: 23rem;
   `}
@@ -36,6 +40,7 @@ export const MenuGroup = styled.div`
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
+
     > div {
       margin-left: ${theme.spacings.xsmall};
     }
@@ -43,10 +48,8 @@ export const MenuGroup = styled.div`
 `
 
 export const MenuNav = styled.div`
-  ${({ theme }) => css`
-    ${media.greaterThan('medium')`
-      margin-left: ${theme.spacings.small}
-    `}
+  ${media.lessThan('medium')`
+    display: none;
   `}
 `
 

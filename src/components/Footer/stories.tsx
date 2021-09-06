@@ -12,4 +12,8 @@ export default {
   }
 } as Meta
 
-export const Default: Story = () => <Footer />
+export const Default: Story = () => (
+  <div style={{ maxWidth: '108.6rem', margin: '0 auto' }}>
+    <Footer />
+  </div>
+)
