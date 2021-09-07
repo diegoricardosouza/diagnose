@@ -24,6 +24,7 @@ export const Wrapper = styled.button<WrapperProps>`
     border: 0.2rem solid ${theme.colors.primary};
     background: transparent;
     color: ${theme.colors.primary};
+    font-family: ${theme.font.family};
     font-size: 2.5rem;
     line-height: 2.5rem;
     padding: ${theme.spacings.xsmall} 2rem;
