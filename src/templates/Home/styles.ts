@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media, { generateMedia } from 'styled-media-query'
+const customMedia = generateMedia({
+  desktop: '991px',
+  tablet: '767px',
+  mobile: '460px'
+})
 
 export const HeaderWrapper = styled.header`
   ${({ theme }) => css`
@@ -27,4 +32,12 @@ export const FooterWrapper = styled.footer`
 
 export const BenefitsWrapper = styled.div`
   margin-bottom: 9rem;
+`
+
+export const GroupDeviceWrapper = styled.div`
+  margin-top: 4rem;
+
+  ${customMedia.greaterThan('desktop')`
+    margin-top: -6.3rem;
+  `}
 `

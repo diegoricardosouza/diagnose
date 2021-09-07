@@ -6,8 +6,4 @@ export default {
   component: AboutGroup
 } as Meta
 
-export const Default: Story = (args) => (
-  <div style={{ maxWidth: '108.6rem', margin: '0 auto' }}>
-    <AboutGroup {...args} />
-  </div>
-)
+export const Default: Story = (args) => <AboutGroup {...args} />

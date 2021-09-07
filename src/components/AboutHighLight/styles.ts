@@ -9,7 +9,10 @@ const customMedia = generateMedia({
 
 export const Wrapper = styled.div`
   position: relative;
-  min-height: 44.5rem;
+
+  ${customMedia.greaterThan('desktop')`
+    min-height: 44.5rem;
+  `}
 `
 
 export const TitleWrapper = styled.div`

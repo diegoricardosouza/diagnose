@@ -1,3 +1,4 @@
+import AboutGroup from 'components/AboutGroup'
 import Benefits from 'components/Benefits'
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
@@ -16,7 +17,11 @@ const Home = () => (
     </S.HeaderWrapper>
 
     <main>
-      <GroupDevice src="img/bg-device.jpg" />
+      <AboutGroup />
+
+      <S.GroupDeviceWrapper>
+        <GroupDevice src="img/bg-device.jpg" />
+      </S.GroupDeviceWrapper>
 
       <S.BenefitsWrapper>
         <Benefits />
