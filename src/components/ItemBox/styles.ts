@@ -81,13 +81,25 @@ export const Subtitle = styled.p`
 export const ConsultasWrapper = styled.div`
   ${customMedia.greaterThan('tablet')`
     display: grid;
-    grid-template-columns: 1fr 46.5rem;
+    grid-template-columns: 2fr 1fr;
+
+    article {
+      padding-left: 3rem;
+      margin-top: 5rem;
+    }
+
+    ${ImageItemStyles.Wrapper}{
+      width: 38rem;
+      height: 38rem;
+      margin-top: -5rem;
+    }
   `}
 
   ${customMedia.greaterThan('desktop')`
     article {
       justify-self: flex-end;
-      margin-top: 10rem
+      margin-top: 10rem;
+      padding-right: 4.5rem;
     }
 
     ${ImageItemStyles.Wrapper}{
