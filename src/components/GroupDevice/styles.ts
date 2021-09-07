@@ -45,9 +45,14 @@ export const DeviceWrapper = styled.div`
 
   ${ItemDeviceStyles.Wrapper} {
     margin: 1.5rem 0;
+    flex: 0 0 50%;
   }
 
   ${media.greaterThan('medium')`
     margin-top: 5rem;
+
+    ${ItemDeviceStyles.Wrapper} {
+      flex: inherit;
+    }
   `}
 `

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import media, { generateMedia } from 'styled-media-query'
 
 const customMedia = generateMedia({
-  desktop: '99.1em',
-  tablet: '76.7em',
-  mobile: '46em'
+  desktop: '991px',
+  tablet: '767px',
+  mobile: '460px'
 })
 
 export const Wrapper = styled.article``

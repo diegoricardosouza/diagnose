@@ -24,3 +24,7 @@ export const FooterWrapper = styled.footer`
     `}
   `}
 `
+
+export const BenefitsWrapper = styled.div`
+  margin-bottom: 9rem;
+`
