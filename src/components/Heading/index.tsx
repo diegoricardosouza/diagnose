@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type HeadingProps = {
-  color: 'normal' | 'white'
+  color?: 'normal' | 'white'
   children: string
 }
 

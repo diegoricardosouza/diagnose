@@ -33,5 +33,6 @@ export const Title = styled.p`
     margin: ${theme.spacings.small} 0 0 0;
     color: ${theme.colors.secondary};
     font-size: ${theme.font.sizes.xlarge};
+    line-height: 3rem;
   `}
 `
