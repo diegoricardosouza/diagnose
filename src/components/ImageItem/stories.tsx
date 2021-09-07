@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import ImageItem, { ImageItemProps } from '.'
 
 export default {
-  title: 'ImageItem',
+  title: 'Item/ImageItem',
   component: ImageItem
 } as Meta
 

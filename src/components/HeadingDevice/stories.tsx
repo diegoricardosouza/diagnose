@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import HeadingDevice, { HeadingDeviceProps } from '.'
 
 export default {
-  title: 'HeadingDevice',
+  title: 'Device/HeadingDevice',
   component: HeadingDevice,
   parameters: {
     backgrounds: {

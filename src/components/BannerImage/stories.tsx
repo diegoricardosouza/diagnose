@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import BannerImage, { BannerImageProps } from '.'
 
 export default {
-  title: 'BannerImage',
+  title: 'Banner/BannerImage',
   component: BannerImage
 } as Meta
 

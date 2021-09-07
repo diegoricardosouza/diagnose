@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import BannerText, { BannerTextProps } from '.'
 
 export default {
-  title: 'BannerText',
+  title: 'Banner/BannerText',
   component: BannerText,
   parameters: {
     backgrounds: {

@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import ItemBenefits, { ItemBenefitsProps } from '.'
 
 export default {
-  title: 'ItemBenefits',
+  title: 'Benefits/ItemBenefits',
   component: ItemBenefits
 } as Meta
 

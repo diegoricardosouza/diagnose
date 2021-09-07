@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import Item, { ItemProps } from '.'
 
 export default {
-  title: 'Item',
+  title: 'Item/Item',
   component: Item,
   parameters: {
     backgrounds: {

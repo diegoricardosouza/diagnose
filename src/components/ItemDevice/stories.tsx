@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import ItemDevice, { ItemDeviceProps } from '.'
 
 export default {
-  title: 'ItemDevice',
+  title: 'Device/ItemDevice',
   component: ItemDevice
 } as Meta
 

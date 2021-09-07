@@ -3,7 +3,7 @@ import ItemGroup, { ItemGroupProps } from '.'
 import items from './mock'
 
 export default {
-  title: 'ItemGroup',
+  title: 'Item/ItemGroup',
   component: ItemGroup,
   parameters: {
     backgrounds: {

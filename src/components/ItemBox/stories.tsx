@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import ItemBox from '.'
 
 export default {
-  title: 'ItemBox',
+  title: 'Item/ItemBox',
   component: ItemBox,
   parameters: {
     layout: 'fullscreen'
