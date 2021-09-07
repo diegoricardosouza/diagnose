@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.article``
 
@@ -9,6 +10,10 @@ export const Title = styled.h2`
     font-family: ${theme.font.raleway};
     font-weight: 600;
     font-style: italic;
+
+    ${media.greaterThan('medium')`
+      font-size: 3rem;
+    `}
   `}
 `
 

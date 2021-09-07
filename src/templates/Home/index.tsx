@@ -1,5 +1,6 @@
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
+import ItemBox from 'components/ItemBox'
 import Menu from 'components/Menu'
 
 import * as S from './styles'
@@ -12,7 +13,9 @@ const Home = () => (
       </Container>
     </S.HeaderWrapper>
 
-    <main></main>
+    <main>
+      <ItemBox />
+    </main>
 
     <S.FooterWrapper>
       <Container>

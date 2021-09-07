@@ -11,7 +11,7 @@ const ItemGroup = ({ title, items }: ItemGroupProps) => (
     <S.Title>{title}</S.Title>
 
     <S.ItemWrapper>
-      {items.map((item, index) => (
+      {items?.map((item, index) => (
         <Item key={index} title={item.title} />
       ))}
     </S.ItemWrapper>
