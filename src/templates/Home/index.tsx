@@ -1,5 +1,6 @@
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
+import GroupDevice from 'components/GroupDevice'
 import ItemBox from 'components/ItemBox'
 import Menu from 'components/Menu'
 
@@ -14,6 +15,7 @@ const Home = () => (
     </S.HeaderWrapper>
 
     <main>
+      <GroupDevice src="img/bg-device.jpg" />
       <ItemBox />
     </main>
 
