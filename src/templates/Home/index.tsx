@@ -1,4 +1,5 @@
 import AboutGroup from 'components/AboutGroup'
+import AgendaGroup from 'components/AgendaGroup'
 import Benefits from 'components/Benefits'
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
@@ -29,7 +30,9 @@ const Home = () => (
 
       <ItemBox />
 
-      <S.AgendaWrapper></S.AgendaWrapper>
+      <S.AgendaWrapper>
+        <AgendaGroup />
+      </S.AgendaWrapper>
     </main>
 
     <S.FooterWrapper>

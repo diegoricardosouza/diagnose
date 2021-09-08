@@ -42,4 +42,7 @@ export const GroupDeviceWrapper = styled.div`
   `}
 `
 
-export const AgendaWrapper = styled.div``
+export const AgendaWrapper = styled.div`
+  margin-top: 9rem;
+  margin-bottom: 7.8rem;
+`

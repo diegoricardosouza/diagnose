@@ -7,13 +7,13 @@ import * as S from './styles'
 const Footer = () => (
   <S.Wrapper>
     <S.SocialWrapper>
-      <Link href="#" passHref>
+      <Link href="https://www.instagram.com/diagnose.pro/" passHref>
         <a target="_blank">
           <ItemSocial src="img/icons/instagram.svg" title="@diagnose.pro" />
         </a>
       </Link>
 
-      <Link href="#" passHref>
+      <Link href="https://www.facebook.com/Diagnose.Pro.Software" passHref>
         <a target="_blank">
           <ItemSocial
             src="img/icons/facebook.svg"
@@ -22,7 +22,10 @@ const Footer = () => (
         </a>
       </Link>
 
-      <Link href="#" passHref>
+      <Link
+        href="https://api.whatsapp.com/send?phone=5541920001038&amp;text=Quero mais informações"
+        passHref
+      >
         <a target="_blank">
           <ItemSocial src="img/icons/whatsapp.svg" title="(41) 92000-1038" />
         </a>

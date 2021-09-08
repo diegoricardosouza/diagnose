@@ -8,7 +8,6 @@ export const Wrapper = styled.article`
 
   ${media.greaterThan('medium')`
     max-width: 27.6rem;
-    min-height: 49.5rem;
   `}
 `
 
