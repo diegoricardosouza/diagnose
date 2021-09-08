@@ -36,6 +36,7 @@ export const InputWrapper = styled.div<InputWrapperProps>`
     border-radius: 0.3rem;
     padding: 0 ${theme.spacings.xsmall};
     border: 0.2rem solid;
+    margin-bottom: 2.5rem;
     ${!!color && wrapperModifiers[color](theme)};
 
     &:focus-within {
