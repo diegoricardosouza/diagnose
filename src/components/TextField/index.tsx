@@ -6,6 +6,7 @@ export type TextFieldProps = {
   initialValue?: string
   error?: string
   placeholder?: string
+  color: 'normal' | 'black'
 } & InputHTMLAttributes<HTMLInputElement>
 
 const TextField = ({
@@ -13,6 +14,7 @@ const TextField = ({
   initialValue = '',
   error,
   placeholder,
+  color = 'normal',
   onInputChange,
   ...props
 }: TextFieldProps) => {
@@ -27,7 +29,7 @@ const TextField = ({
 
   return (
     <S.Wrapper error={!!error}>
-      <S.InputWrapper>
+      <S.InputWrapper color={color}>
         <S.Input
           type="text"
           onChange={onChange}
