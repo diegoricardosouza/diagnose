@@ -28,6 +28,8 @@ const Home = () => (
       </S.BenefitsWrapper>
 
       <ItemBox />
+
+      <S.AgendaWrapper></S.AgendaWrapper>
     </main>
 
     <S.FooterWrapper>

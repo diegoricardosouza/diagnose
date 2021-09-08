@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react'
 import AgendaText, { AgendaTextProps } from '.'
 
 export default {
-  title: 'AgendaText',
+  title: 'Agenda/AgendaText',
   component: AgendaText
 } as Meta
 

@@ -41,3 +41,5 @@ export const GroupDeviceWrapper = styled.div`
     margin-top: -6.3rem;
   `}
 `
+
+export const AgendaWrapper = styled.div``
