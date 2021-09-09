@@ -1,5 +1,6 @@
 import AboutGroup from 'components/AboutGroup'
 import AgendaGroup from 'components/AgendaGroup'
+import BannerGroup from 'components/BannerGroup'
 import Benefits from 'components/Benefits'
 import { Container } from 'components/Container'
 import Footer from 'components/Footer'
@@ -18,6 +19,10 @@ const Home = () => (
     </S.HeaderWrapper>
 
     <main>
+      <S.BannerWrapper>
+        <BannerGroup src="img/bg-banner.png" />
+      </S.BannerWrapper>
+
       <AboutGroup />
 
       <S.GroupDeviceWrapper>

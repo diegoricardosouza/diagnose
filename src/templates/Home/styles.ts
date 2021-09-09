@@ -6,6 +6,10 @@ const customMedia = generateMedia({
   mobile: '460px'
 })
 
+export const BannerWrapper = styled.div`
+  margin-bottom: 4.5rem;
+`
+
 export const HeaderWrapper = styled.header`
   ${({ theme }) => css`
     background: ${theme.colors.white};

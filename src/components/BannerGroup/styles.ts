@@ -1,8 +1,14 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media, { generateMedia } from 'styled-media-query'
 import { BannerGroupProps } from '.'
 import * as FormBannerStyles from 'components/FormBanner/styles'
 import * as ButtonStyles from 'components/Button/styles'
+
+const customMedia = generateMedia({
+  desktop: '991px',
+  tablet: '767px',
+  mobile: '460px'
+})
 
 export const Wrapper = styled.article<BannerGroupProps>`
   ${({ theme, src }) => css`
@@ -31,7 +37,19 @@ export const FormWrapper = styled.div`
     margin: 0 auto;
   }
 
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('tablet')`
+    margin-top: 12.6rem;
+
+    article {
+      margin: 0;
+    }
+
+    ${FormBannerStyles.Wrapper} {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    }
+  `}
+
+  ${customMedia.greaterThan('desktop')`
     margin-top: 15.4rem;
 
     article {
@@ -47,7 +65,7 @@ export const FormWrapper = styled.div`
 export const ImageWrapper = styled.div`
   display: none;
 
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('desktop')`
     display: block;
     margin-top: 6rem;
   `}
@@ -57,7 +75,7 @@ export const TextWrapper = styled.div``
 
 export const ButtonWrapper = styled.div`
   ${({ theme }) => css`
-    ${media.lessThan('medium')`
+    ${customMedia.lessThan('tablet')`
       ${ButtonStyles.Wrapper} {
         color: ${theme.colors.white};
         border-color: ${theme.colors.white};
