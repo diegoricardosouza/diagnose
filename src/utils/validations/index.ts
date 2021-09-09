@@ -7,20 +7,23 @@ export type InputFormProps = {
 }
 
 const fieldsValidations = {
-  nome: Joi.string()
-    .min(5)
-    .required()
-    .message('Campo de preenchimento obrigatório.'),
+  nome: Joi.string().required().messages({
+    'string.base': `"a" should be a type of 'text'`,
+    'string.empty': `Campo de preenchimento obrigatório`,
+    'any.required': `Campo de preenchimento obrigatório`
+  }),
   email: Joi.string()
     .email({ tlds: { allow: false } })
     .required()
     .messages({
       'string.email': 'E-mail inválido',
+      'string.empty': `Campo de preenchimento obrigatório`,
       'any.required': 'Campo de preenchimento obrigatório.'
     }),
-  telefone: Joi.string()
-    .required()
-    .message('Campo de preenchimento obrigatório.')
+  telefone: Joi.string().required().messages({
+    'string.empty': `Campo de preenchimento obrigatório`,
+    'any.required': 'Campo de preenchimento obrigatório.'
+  })
 }
 
 export type FieldErrors = {

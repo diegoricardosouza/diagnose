@@ -36,7 +36,6 @@ export const InputWrapper = styled.div<InputWrapperProps>`
     border-radius: 0.3rem;
     padding: 0 ${theme.spacings.xsmall};
     border: 0.2rem solid;
-    margin-bottom: 2.5rem;
     ${!!color && wrapperModifiers[color](theme)};
 
     &:focus-within {
@@ -65,13 +64,15 @@ export const Input = styled.input`
 
 export const Error = styled.p`
   ${({ theme }) => css`
+    margin: 0.5rem 0 0 0;
     color: ${theme.colors.red};
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: 1.4rem;
   `}
 `
 
 export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, error }) => css`
+    margin-bottom: 2.5rem;
     ${error && wrapperModifiers.error(theme)}
   `}
 `

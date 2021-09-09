@@ -9,11 +9,14 @@ export const FormLoading = styled.img.attrs(() => ({
 
 export const FormError = styled.div`
   ${({ theme }) => css`
+    margin: 0 0 0.7rem 0;
     text-align: center;
     color: red;
     font-size: ${theme.font.sizes.small};
+    letter-spacing: 0.1rem;
+
     svg {
-      width: 1.6rem;
+      width: 1.8rem;
     }
   `}
 `
