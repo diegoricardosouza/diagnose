@@ -5,11 +5,14 @@ import FormHeading from 'components/FormHeading'
 import TextField from 'components/TextField'
 import * as S from './styles'
 import { FieldErrors } from 'utils/validations'
+import { FormError, FormLoading } from 'components/Form'
+import { ErrorOutline } from '@styled-icons/material-outlined'
 
 const FormBanner = () => {
   const [formError, setFormError] = useState('')
   const [fieldError, setFieldError] = useState<FieldErrors>({})
   const [values, setValues] = useState({ nome: '', email: '', telefone: '' })
+  const [loading, setLoading] = useState(false)
 
   const handleInput = (field: string, value: string) => {
     setValues((s) => ({ ...s, [field]: value }))
@@ -25,6 +28,11 @@ const FormBanner = () => {
         />
       </S.HeaderWrapper>
 
+      {!!formError && (
+        <FormError>
+          <ErrorOutline /> {formError}
+        </FormError>
+      )}
       <form>
         <TextField
           name="nome"
@@ -50,7 +58,9 @@ const FormBanner = () => {
           onInputChange={(v) => handleInput('telefone', v)}
         />
 
-        <ButtonForm type="submit">Enviar</ButtonForm>
+        <ButtonForm type="submit">
+          {loading ? <FormLoading /> : <span>Enviar</span>}
+        </ButtonForm>
       </form>
     </S.Wrapper>
   )
