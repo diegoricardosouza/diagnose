@@ -7,6 +7,7 @@ export type TextFieldProps = {
   error?: string
   placeholder?: string
   color: 'normal' | 'black'
+  datajs?: string
 } & InputHTMLAttributes<HTMLInputElement>
 
 const TextField = ({
@@ -15,6 +16,7 @@ const TextField = ({
   error,
   placeholder,
   color = 'normal',
+  datajs,
   onInputChange,
   ...props
 }: TextFieldProps) => {
@@ -36,6 +38,7 @@ const TextField = ({
           value={value}
           name={name}
           placeholder={placeholder}
+          data-js={datajs}
           {...(name ? { id: name } : {})}
           {...props}
         />

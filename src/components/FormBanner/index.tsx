@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { ErrorOutline } from '@styled-icons/material-outlined'
 
 import ButtonForm from 'components/ButtonForm'
@@ -8,12 +8,18 @@ import { FormError, FormLoading } from 'components/Form'
 
 import * as S from './styles'
 import { FieldErrors, formValidate } from 'utils/validations'
+import { phone } from 'utils/mask'
 
 const FormBanner = () => {
   const [formError, setFormError] = useState('')
   const [fieldError, setFieldError] = useState<FieldErrors>({})
   const [values, setValues] = useState({ nome: '', email: '', telefone: '' })
   const [loading, setLoading] = useState(false)
+  const [send, setSend] = useState(false)
+
+  const handleKeyUp = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+    phone(e)
+  }, [])
 
   const handleInput = (field: string, value: string) => {
     setValues((s) => ({ ...s, [field]: value }))
@@ -33,6 +39,8 @@ const FormBanner = () => {
     }
 
     setFieldError({})
+
+    // faz o envio do email
 
     setLoading(false)
 
@@ -80,6 +88,7 @@ const FormBanner = () => {
           type="tel"
           color="normal"
           error={fieldError?.telefone}
+          onKeyUp={handleKeyUp}
           onInputChange={(v) => handleInput('telefone', v)}
         />
 
