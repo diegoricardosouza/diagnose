@@ -8,12 +8,23 @@ const customMedia = generateMedia({
 
 export const BannerWrapper = styled.div`
   margin-bottom: 4.5rem;
+  margin-top: 7.5rem;
+
+  ${media.greaterThan('medium')`
+    margin-top: 9rem;
+  `}
 `
 
 export const HeaderWrapper = styled.header`
   ${({ theme }) => css`
     background: ${theme.colors.white};
     padding: ${theme.spacings.xsmall} 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.2);
 
     ${media.greaterThan('medium')`
       min-height: 9rem;

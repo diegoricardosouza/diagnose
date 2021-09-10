@@ -28,23 +28,29 @@ const Menu = () => {
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
           <S.MenuLink>
-            <Link activeClass="active" to="home" spy={true} smooth={true}>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-90}
+            >
               Início
             </Link>
           </S.MenuLink>
 
           <S.MenuLink>
-            <Link to="vantagens" spy={true} smooth={true}>
+            <Link to="vantagens" spy={true} smooth={true} offset={-90}>
               Vantagens
             </Link>
           </S.MenuLink>
           <S.MenuLink>
-            <Link to="contato" spy={true} smooth={true}>
+            <Link to="contato" spy={true} smooth={true} offset={-90}>
               Contato
             </Link>
           </S.MenuLink>
           <S.MenuLink>
-            <Link to="demonstracao" spy={true} smooth={true}>
+            <Link to="demonstracao" spy={true} smooth={true} offset={-90}>
               Solicitar Demonstração
             </Link>
           </S.MenuLink>
@@ -55,22 +61,47 @@ const Menu = () => {
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
           <S.MenuLink>
-            <Link activeClass="active" to="home" spy={true} smooth={true}>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-75}
+              onClick={() => setIsOpen(false)}
+            >
               Início
             </Link>
           </S.MenuLink>
           <S.MenuLink>
-            <Link to="vantagens" spy={true} smooth={true}>
+            <Link
+              to="vantagens"
+              spy={true}
+              smooth={true}
+              offset={-75}
+              onClick={() => setIsOpen(false)}
+            >
               Vantagens
             </Link>
           </S.MenuLink>
           <S.MenuLink>
-            <Link to="contato" spy={true} smooth={true}>
+            <Link
+              to="contato"
+              spy={true}
+              smooth={true}
+              offset={-75}
+              onClick={() => setIsOpen(false)}
+            >
               Contato
             </Link>
           </S.MenuLink>
           <S.MenuLink>
-            <Link to="demonstracao" spy={true} smooth={true}>
+            <Link
+              to="demonstracao"
+              spy={true}
+              smooth={true}
+              offset={-75}
+              onClick={() => setIsOpen(false)}
+            >
               Solicitar Demonstração
             </Link>
           </S.MenuLink>
