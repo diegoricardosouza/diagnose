@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react'
-import { ErrorOutline } from '@styled-icons/material-outlined'
+import { Check, ErrorOutline } from '@styled-icons/material-outlined'
 
 import ButtonForm from 'components/ButtonForm'
 import FormHeading from 'components/FormHeading'
 import TextField from 'components/TextField'
-import { FormError, FormLoading } from 'components/Form'
+import { FormError, FormLoading, FormSuccess } from 'components/Form'
 
 import * as S from './styles'
 import { FieldErrors, formValidate } from 'utils/validations'
@@ -35,17 +35,36 @@ const FormBanner = () => {
       setFieldError(errors)
       setLoading(false)
       setFormError('')
+      setSend(false)
       return
     }
 
     setFieldError({})
 
     // faz o envio do email
+    const data = {
+      ...values
+    }
 
-    setLoading(false)
+    const response = await fetch('api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
 
-    // jogar o erro
-    setFormError('erro ao enviar os dados.')
+    const dataResponse = await response.json()
+
+    if (dataResponse.status === 200) {
+      setSend(true)
+      setValues({ nome: '', email: '', telefone: '' })
+      setLoading(false)
+    } else {
+      setFormError('erro ao enviar os dados.')
+      setLoading(false)
+    }
   }
 
   return (
@@ -57,6 +76,13 @@ const FormBanner = () => {
           subtitle="Nossos consultores entram<br> em contato com você."
         />
       </S.HeaderWrapper>
+
+      {!!send && (
+        <FormSuccess>
+          <Check />
+          Mensagem enviada com sucesso!
+        </FormSuccess>
+      )}
 
       {!!formError && (
         <FormError>
@@ -70,6 +96,7 @@ const FormBanner = () => {
           type="text"
           color="normal"
           error={fieldError?.nome}
+          value={values.nome}
           onInputChange={(v) => handleInput('nome', v)}
         />
 
@@ -79,6 +106,7 @@ const FormBanner = () => {
           type="email"
           color="normal"
           error={fieldError?.email}
+          value={values.email}
           onInputChange={(v) => handleInput('email', v)}
         />
 
@@ -88,6 +116,7 @@ const FormBanner = () => {
           type="tel"
           color="normal"
           error={fieldError?.telefone}
+          value={values.telefone}
           onKeyUp={handleKeyUp}
           onInputChange={(v) => handleInput('telefone', v)}
         />

@@ -24,11 +24,17 @@ export const FormError = styled.div`
 export const FormSuccess = styled.p`
   ${({ theme }) => css`
     text-align: center;
-    color: ${theme.colors.black};
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.small};
+    background: #6da962;
+    margin: 0 3rem 1.5rem 3rem;
+    padding: 1rem 0;
+    border-radius: 0.3rem;
+
     svg {
-      color: ${theme.colors.secondary};
+      color: ${theme.colors.white};
       width: 2.4rem;
+      margin-right: 0.8rem;
     }
   `}
 `
