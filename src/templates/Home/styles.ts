@@ -23,6 +23,10 @@ export const HeaderWrapper = styled.header`
   `}
 `
 
+export const AboutWrapper = styled.div``
+
+export const ItemWrapper = styled.div``
+
 export const FooterWrapper = styled.footer`
   ${({ theme }) => css`
     background: ${theme.colors.secondary};

@@ -1,4 +1,6 @@
 import { KeyboardArrowDown } from '@styled-icons/material-outlined'
+import { Link } from 'react-scroll'
+
 import BannerImage from 'components/BannerImage'
 import BannerText from 'components/BannerText'
 import Button from 'components/Button'
@@ -32,8 +34,10 @@ const BannerGroup = ({ src }: BannerGroupProps) => (
       </S.ContentWrapper>
 
       <S.ButtonWrapper>
-        <Button icon={<KeyboardArrowDown />} as="a" href="#">
-          Saiba mais
+        <Button icon={<KeyboardArrowDown />} as="div">
+          <Link to="sobre" spy={true} smooth={true}>
+            Saiba mais
+          </Link>
         </Button>
       </S.ButtonWrapper>
     </Container>

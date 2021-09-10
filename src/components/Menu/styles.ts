@@ -48,12 +48,13 @@ export const MenuGroup = styled.div`
 `
 
 export const MenuNav = styled.div`
+  display: flex;
   ${media.lessThan('medium')`
     display: none;
   `}
 `
 
-export const MenuLink = styled.a`
+export const MenuLink = styled.li`
   ${({ theme }) => css`
     position: relative;
     color: ${theme.colors.secondary};
@@ -62,8 +63,11 @@ export const MenuLink = styled.a`
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
+    list-style: none;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    .active {
       color: ${theme.colors.primary};
     }
 

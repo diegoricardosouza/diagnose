@@ -19,23 +19,27 @@ const Home = () => (
     </S.HeaderWrapper>
 
     <main>
-      <S.BannerWrapper>
+      <S.BannerWrapper id="home">
         <BannerGroup src="img/bg-banner.png" />
       </S.BannerWrapper>
 
-      <AboutGroup />
+      <S.AboutWrapper id="sobre">
+        <AboutGroup />
+      </S.AboutWrapper>
 
       <S.GroupDeviceWrapper>
         <GroupDevice src="img/bg-device.jpg" />
       </S.GroupDeviceWrapper>
 
-      <S.BenefitsWrapper>
+      <S.BenefitsWrapper id="vantagens">
         <Benefits />
       </S.BenefitsWrapper>
 
-      <ItemBox />
+      <S.ItemWrapper id="contato">
+        <ItemBox />
+      </S.ItemWrapper>
 
-      <S.AgendaWrapper>
+      <S.AgendaWrapper id="demonstracao">
         <AgendaGroup />
       </S.AgendaWrapper>
     </main>

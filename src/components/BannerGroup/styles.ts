@@ -18,7 +18,7 @@ export const Wrapper = styled.article<BannerGroupProps>`
 
     ${media.greaterThan('medium')`
       background: url(${src}) top center no-repeat;
-      min-height: 79.4rem;
+      min-height: 100vh;
       padding-top: 5.5rem;
       padding-bottom: 0;
     `}
