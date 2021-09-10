@@ -26,6 +26,13 @@ const wrapperModifiers = {
       &::placeholder {
         color: ${theme.colors.white};
       }
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 ${theme.spacings.small}
+          ${theme.colors.secondary} inset;
+        filter: none;
+        -webkit-text-fill-color: ${theme.colors.white};
+      }
     }
   `
 }
