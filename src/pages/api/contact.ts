@@ -1,8 +1,4 @@
-type ContactProps = {
-  nome: string
-  email: string
-  telefone: string
-}
+import { Request, Response } from 'express'
 
 export default function (req: Request, res: Response) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -20,25 +16,24 @@ export default function (req: Request, res: Response) {
     secure: true
   })
 
-  const body = req.body as unknown as ContactProps
-
   const mailData = {
     from: process.env.FROM,
     to: process.env.TO,
-    subject: `Mensagem de ${body.nome}`,
-    text: body.nome,
+    subject: `Mensagem de ${req.body.nome}`,
+    text: req.body.nome,
     html: `<div>
-      <strong>Nome: </strong>${body.nome}<br>
-      <strong>E-mail: </strong>${body.email}<br>
-      <strong>Telefone: </strong>${body.telefone}
-    </div>`
+        <strong>Nome: </strong>${req.body.nome}<br>
+        <strong>E-mail: </strong>${req.body.email}<br>
+        <strong>Telefone: </strong>${req.body.telefone}
+      </div>`
   }
 
-  transporter.sendMail(mailData, (err: string) => {
+  transporter.sendMail(mailData, (err: string, info: string) => {
     if (err) {
       console.log('Error' + err)
       return res.json({ error: err })
     } else {
+      console.log(info)
       return res.json({ status: 200 })
     }
   })
