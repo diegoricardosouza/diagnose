@@ -16,6 +16,13 @@ export default function (req: Request, res: Response) {
     secure: true
   })
 
+  const fone = req.body.telefone
+    .replace(/\D+/g, '')
+    .replace(/(\d{2})(\d)/, '($1) $2')
+    .replace(/(\d{4})(\d)/, '$1-$2')
+    .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+    .replace(/(-\d{4})\d+?$/, '$1')
+
   const mailData = {
     from: process.env.FROM,
     to: process.env.TO,
@@ -24,7 +31,7 @@ export default function (req: Request, res: Response) {
     html: `<div>
         <strong>Nome: </strong>${req.body.nome}<br>
         <strong>E-mail: </strong>${req.body.email}<br>
-        <strong>Telefone: </strong>${req.body.telefone}
+        <strong>Telefone: </strong>${fone}
       </div>`
   }
 
