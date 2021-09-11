@@ -59,6 +59,11 @@ const FormBanner = () => {
 
     if (dataResponse.status === 200) {
       setSend(true)
+
+      setTimeout(() => {
+        setSend(false)
+      }, 2500)
+
       setValues({ nome: '', email: '', telefone: '' })
       setLoading(false)
     } else {

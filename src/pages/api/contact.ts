@@ -12,7 +12,7 @@ export default function (req: Request, res: Response) {
 
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: 'smtp.gmail.com',
+    host: process.env.HOST,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
@@ -23,8 +23,8 @@ export default function (req: Request, res: Response) {
   const body = req.body as unknown as ContactProps
 
   const mailData = {
-    from: 'demo@demo.com',
-    to: 'diegoricardoweb@gmail.com',
+    from: process.env.FROM,
+    to: process.env.TO,
     subject: `Mensagem de ${body.nome}`,
     text: body.nome,
     html: `<div>
