@@ -35,7 +35,7 @@ const BannerGroup = ({ src }: BannerGroupProps) => (
 
       <S.ButtonWrapper>
         <Button icon={<KeyboardArrowDown />} as="div">
-          <Link to="sobre" spy={true} smooth={true}>
+          <Link to="sobre" spy={true} smooth={true} offset={-90}>
             Saiba mais
           </Link>
         </Button>

@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo'
+
 import AboutGroup from 'components/AboutGroup'
 import AgendaGroup from 'components/AgendaGroup'
 import BannerGroup from 'components/BannerGroup'
@@ -12,6 +14,26 @@ import * as S from './styles'
 
 const Home = () => (
   <>
+    <NextSeo
+      title="Diagnose Pró"
+      description="O Sistema Web mais completo para Gestão de clínicas e consultórios! O Diagnose Pró já atende mais de 2 mil consultórios e clínicas por todo Brasil!"
+      canonical="http://www.diagnosepro.com.br"
+      openGraph={{
+        url: 'http://www.diagnosepro.com.br',
+        title: 'Diagnose Pró',
+        description:
+          'O Sistema Web mais completo para Gestão de clínicas e consultórios! O Diagnose Pró já atende mais de 2 mil consultórios e clínicas por todo Brasil!',
+        images: [
+          {
+            url: 'img/cover.jpg',
+            width: 1827,
+            height: 875,
+            alt: 'Diagnose Pró'
+          }
+        ],
+        site_name: 'Diagnose Pró'
+      }}
+    />
     <S.HeaderWrapper>
       <Container>
         <Menu />

@@ -37,11 +37,9 @@ export default function (req: Request, res: Response) {
 
   transporter.sendMail(mailData, (err: string, info: string) => {
     if (err) {
-      console.log('Error' + err)
       return res.json({ error: err })
     } else {
-      console.log(info)
-      return res.json({ status: 200 })
+      return res.json({ status: 200, message: info })
     }
   })
 }
