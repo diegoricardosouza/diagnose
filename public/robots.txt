@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://www.diagnosepro.com.br
+
+# Sitemaps
+Sitemap: http://www.diagnosepro.com.br/sitemap.xml
