@@ -26,7 +26,7 @@ export default function (req: Request, res: Response) {
   const mailData = {
     from: process.env.FROM,
     to: process.env.TO,
-    subject: `Mensagem de ${req.body.nome}`,
+    subject: `Diagnose Pró - Solicitação de contato de ${req.body.nome}`,
     text: req.body.nome,
     html: `<div>
         <strong>Nome: </strong>${req.body.nome}<br>
