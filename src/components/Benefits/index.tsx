@@ -50,8 +50,8 @@ const Benefits = () => (
 
         <S.ItemSix>
           <ItemBenefits
-            title="Sistema de controle<br> financiamento e faturamento<br> com TISS 100% Web"
-            src="img/vantagens/teleconsulta.svg"
+            title="Sistema de controle<br> financeiro e faturamento<br> com TISS 100% Web"
+            src="img/vantagens/pasta.svg"
           />
         </S.ItemSix>
       </S.WrapperContent>
