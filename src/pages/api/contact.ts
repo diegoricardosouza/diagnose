@@ -36,7 +36,7 @@ export default function (req: Request, res: Response) {
       </div>`
   }
 
-  var options = {
+  let options = {
     method: 'POST',
     url: 'https://n8n.lpt4.com.br/webhook/faf38315-0092-4f19-b2b2-9af15f2286f6',
     headers: {'Content-Type': 'application/json'},
