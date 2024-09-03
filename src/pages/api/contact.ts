@@ -1,5 +1,4 @@
 import { Request, Response } from 'express'
-import axios from 'axios'
 
 export default function (req: Request, res: Response) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -36,32 +35,11 @@ export default function (req: Request, res: Response) {
       </div>`
   }
 
-  var options = {
-    method: 'POST',
-    url: 'https://n8n.lpt4.com.br/webhook/faf38315-0092-4f19-b2b2-9af15f2286f6',
-    headers: {'Content-Type': 'application/json'},
-    data: {nome: req.body.nome, email: req.body.email, telefone: fone}
-  };
-
-  axios.request(options).then(function (response) {
-    transporter.sendMail(mailData, (err: string, info: string) => {
-      if (err) {
-        return res.json({ error: err })
-      } else {
-        return res.json({ status: 200, message: info })
-      }
-    })
-  }).catch(function (error) {
-    transporter.sendMail(mailData, (err: string, info: string) => {
-      if (err) {
-        return res.json({ error: err })
-      } else {
-        return res.json({ status: 200, message: info })
-      }
-    })
-  });
-
-
-
-
+  transporter.sendMail(mailData, (err: string, info: string) => {
+    if (err) {
+      return res.json({ error: err })
+    } else {
+      return res.json({ status: 200, message: info })
+    }
+  })
 }
