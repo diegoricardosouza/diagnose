@@ -36,11 +36,11 @@ export default function (req: Request, res: Response) {
       </div>`
   }
 
-  let options = {
+  const options = {
     method: 'POST',
     url: 'https://n8n.lpt4.com.br/webhook/faf38315-0092-4f19-b2b2-9af15f2286f6',
     headers: {'Content-Type': 'application/json'},
-    data: {nome: req.body.nome, email: req.body.email, telefone: fone}
+    data: { nome: req.body.nome, email: req.body.email, telefone: fone }
   };
 
   axios.request(options).then(function (response) {
