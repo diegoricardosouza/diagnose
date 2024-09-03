@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import axios from 'axios'
 
 export default function (req: Request, res: Response) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -42,4 +43,17 @@ export default function (req: Request, res: Response) {
       return res.json({ status: 200, message: info })
     }
   })
+
+  var options = {
+    method: 'POST',
+    url: 'https://n8n.lpt4.com.br/webhook/faf38315-0092-4f19-b2b2-9af15f2286f6',
+    headers: {'Content-Type': 'application/json'},
+    data: {nome: req.body.nome, email: req.body.email, telefone: fone}
+  };
+
+  axios.request(options).then(function (response) {
+    console.log(response.data);
+  }).catch(function (error) {
+    console.error(error);
+  });
 }
