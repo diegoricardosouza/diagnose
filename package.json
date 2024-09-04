@@ -2,9 +2,12 @@
   "name": "diagnose-pro",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
@@ -24,6 +27,7 @@
     "@styled-icons/material-outlined": "^10.34.0",
     "@styled-icons/remix-fill": "^10.18.0",
     "@types/express": "^4.17.13",
+    "axios": "^1.7.7",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "joi": "^17.4.2",
@@ -36,6 +40,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scroll": "^1.8.4",
+    "request": "^2.88.2",
     "styled-components": "5.3.0",
     "styled-media-query": "^2.1.2"
   },
@@ -48,6 +53,7 @@
     "@types/nodemailer": "^6.4.4",
     "@types/react": "^17.0.14",
     "@types/react-scroll": "^1.8.3",
+    "@types/request": "^2.48.12",
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
