@@ -37,7 +37,7 @@ export const SocialWrapper = styled.div`
   `}
 `
 export const WhatsWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   right: 15px;
   bottom: 15px;
 
