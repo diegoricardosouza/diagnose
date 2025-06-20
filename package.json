@@ -6,8 +6,8 @@
     "node": "18.x"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
+    "dev": "next dev",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
