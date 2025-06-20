@@ -36,6 +36,7 @@ export const SocialWrapper = styled.div`
     `}
   `}
 `
+
 export const WhatsWrapper = styled.div`
   position: fixed;
   right: 15px;
