@@ -1,5 +1,6 @@
 import ItemSocial from 'components/ItemSocial'
 import Logo from 'components/Logo'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import * as S from './styles'
@@ -39,6 +40,18 @@ const Footer = () => (
     </S.SocialWrapper>
 
     <Logo padrao={false} />
+
+    <S.WhatsWrapper>
+      <span>Fale com nossos atendentes</span>
+
+      <a
+        href="https://api.whatsapp.com/send?phone=5541920001038&text=Ol%C3%A1!%20Acessei%20atrav%C3%A9s%20do%20website.%20Gostaria%20de%20tirar%20umas%20d%C3%BAvidas."
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Image src="/whatsapp.png" alt="Whatsapp" width={60} height={60} />
+      </a>
+    </S.WhatsWrapper>
   </S.Wrapper>
 )
 
